@@ -31,7 +31,7 @@ DROPIN_BASE="/etc/systemd/system"
 DROPIN_NAME="oom.conf"
 MARKER="# Managed by OOMProtector"
 DEFAULT_ADJ="-500"
-DEFAULT_UNITS="x-ui caddy nginx fail2ban subpage-server"
+DEFAULT_UNITS="systemd-resolved docker x-ui caddy nginx fail2ban subpage-server"
 
 unit_exists() { systemctl cat "${1}.service" &>/dev/null; }
 dropin_dir()  { echo "${DROPIN_BASE}/${1}.service.d"; }
